@@ -8,7 +8,8 @@ using Web_rekuperator.Models;
 namespace Web_proekt.Models
 {
     public class Model
-    {//Обозначение переменных
+    {
+        //<---------------Обозначение переменных----------------->//
         public double B { get; set; }
         public double ALFA { get; set; }
         public double LALFA { get; set; }
@@ -35,7 +36,9 @@ namespace Web_proekt.Models
         public double DDVK { get; set; }
         public double S { get; set; }
         public double FIBL { get; set; }
-        //Обозначение формул
+
+        //<---------------Обозначение формул----------------->//
+
         public double Teplo_VB1 { get; set; }
         public double VBPR { get; set; }
         public double VD1 { get; set; }
@@ -74,13 +77,14 @@ namespace Web_proekt.Models
             Graph();
         }
 
+        //<---------------math library "Formul"----------------->//
         public void CalculateBezPodbora()
         {
             if (B == 0 || ALFA == 0 || LALFA == 0 || VALFA == 0 || VL == 0 || TRO == 0 || BETTAT == 0 || CV1 == 0 || TV1 == 0 ||
                 CV2 == 0 || TV2 == 0 || ETA == 0 || TD1 == 0 || TD2 == 0 || KSIDELTAT == 0 || Z1 == 0 || Z1 == 0 || Z3 == 0 || ETAD == 0 ||
                  ETAV == 0 || DDDK == 0 || ALFADL1 == 0 || KT == 0 || DDVK == 0 || FIBL == 0 || S == 0)
             {
-                //Message.Show = "Это значение не может равняться нулю";
+                //return false;
             }
             else
             {
@@ -115,7 +119,7 @@ namespace Web_proekt.Models
                 FRaz = Math.Round(F1 - F);
             }
         }
-        //График
+        //<---------------Графика----------------->//
         public static double[] ArrayX;
         public static double[] ArrayY;
         public void Graph()
@@ -140,7 +144,7 @@ namespace Web_proekt.Models
                 }
             }
         }
-        // метод подбора параметров для TV2 
+        //<---------------метод подбора параметров для TV2----------------->//
         public void Padbor()
         {
             if (FRaz > 0)
