@@ -84,7 +84,7 @@ namespace Web_proekt.Models
                 CV2 == 0 || TV2 == 0 || ETA == 0 || TD1 == 0 || TD2 == 0 || KSIDELTAT == 0 || Z1 == 0 || Z1 == 0 || Z3 == 0 || ETAD == 0 ||
                  ETAV == 0 || DDDK == 0 || ALFADL1 == 0 || KT == 0 || DDVK == 0 || FIBL == 0 || S == 0)
             {
-                //return false;
+                Console.WriteLine("Введите цифру");
             }
             else
             {
